@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Database</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        button { margin: 5px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Movies Database</h1>
+
+    <button id="showAddForm">Add Movie</button>
+    
+    <div id="addMovieForm" class="hidden">
+        <h2>Add New Movie</h2>
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="genre" placeholder="Genre">
+        <input type="text" id="director" placeholder="Director">
+        <input type="number" id="year" placeholder="Year">
+        <button id="addMovie">Add Movie</button>
+    </div>
+
+    <table id="moviesTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Director</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Modal for Editing -->
+    <div id="editMovieModal" class="hidden">
+        <h2>Edit Movie</h2>
+        <input type="text" id="editTitle" placeholder="Title">
+        <input type="text" id="editGenre" placeholder="Genre">
+        <input type="text" id="editDirector" placeholder="Director">
+        <input type="number" id="editYear" placeholder="Year">
+        <button id="saveEdit">Save</button>
+        <button id="cancelEdit">Cancel</button>
+    </div>
+    <script type="module" src="./script.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "movies": [
+    {
+      "id": "2",
+      "title": "The Godfather",
+      "genre": "Crime",
+      "director": "Francis Ford Coppola",
+      "year": 1972
+    },
+    {
+      "id": "3",
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "director": "Quentin Tarantino",
+      "year": 1994
+    },
+    {
+      "id": "4",
+      "title": "The Dark Knight",
+      "genre": "Action",
+      "director": "Christopher Nolan",
+      "year": 2008
+    },
+    {
+      "id": "5",
+      "title": "Inception",
+      "genre": "Action",
+      "director": "Christopher Nolan",
+      "year": 2010
+    },
+    {
+      "id": "0f6c",
+      "title": "",
+      "genre": "",
+      "director": "",
+      "year": ""
+    }
+  ]
+}
