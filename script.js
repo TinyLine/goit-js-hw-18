@@ -1,6 +1,5 @@
 const baseUrl = 'http://localhost:3000/movies';
 
-        // Функция для загрузки фильмов при загрузке страницы
         async function loadMovies() {
             try {
                 const response = await fetch(baseUrl);
@@ -22,8 +21,6 @@ const baseUrl = 'http://localhost:3000/movies';
                     `;
                     tableBody.appendChild(row);
                 });
-
-                // Привязка обработчиков событий после загрузки данных
                 document.querySelectorAll('.edit-button').forEach(button => {
                     button.addEventListener('click', () => editMovie(button.dataset.id));
                 });
@@ -37,7 +34,6 @@ const baseUrl = 'http://localhost:3000/movies';
             }
         }
 
-        // Загрузка фильмов при первой загрузке страницы
         window.onload = loadMovies;
 
         document.getElementById('showAddForm').addEventListener('click', () => {
@@ -61,7 +57,7 @@ const baseUrl = 'http://localhost:3000/movies';
 
                 if (response.ok) {
                     document.getElementById('addMovieForm').classList.add('hidden');
-                    loadMovies(); // Обновляем список фильмов
+                    loadMovies(); 
                 } else {
                     console.error('Error adding movie:', await response.text());
                 }
@@ -106,7 +102,7 @@ const baseUrl = 'http://localhost:3000/movies';
 
                 if (response.ok) {
                     document.getElementById('editMovieModal').classList.add('hidden');
-                    loadMovies(); // Обновляем список фильмов
+                    loadMovies(); 
                 } else {
                     console.error('Error updating movie:', await response.text());
                 }
@@ -126,7 +122,7 @@ const baseUrl = 'http://localhost:3000/movies';
                 });
 
                 if (response.ok) {
-                    loadMovies(); // Обновляем список фильмов
+                    loadMovies();
                 } else {
                     console.error('Error deleting movie:', await response.text());
                 }
